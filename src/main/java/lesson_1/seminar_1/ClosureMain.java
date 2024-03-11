@@ -1,4 +1,4 @@
-package seminar_1;
+package lesson_1.seminar_1;
 
 public class ClosureMain {
     public static void main(String[] args) {

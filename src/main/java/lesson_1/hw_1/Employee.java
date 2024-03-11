@@ -1,4 +1,4 @@
-package hw_1;
+package lesson_1.hw_1;
 
 public class Employee {
     private final String name;
