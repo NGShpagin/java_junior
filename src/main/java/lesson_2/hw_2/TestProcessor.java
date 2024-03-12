@@ -4,9 +4,9 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class TestProcessor {
@@ -47,10 +47,9 @@ public class TestProcessor {
             }
         }
 
-        Stream<Method> sortedTestMethods =
-                testMethods.stream().sorted(Comparator.comparingInt(m -> m.getAnnotation(Test.class).order()));
+        testMethods.sort(Comparator.comparingInt(m -> m.getAnnotation(Test.class).order()));
 
-        sortedTestMethods.forEach(testMethod -> {
+        testMethods.forEach(testMethod -> {
             beforeMethods.forEach(beforeMethod -> runTest(beforeMethod, testObj));
             runTest(testMethod, testObj);
             afterMethods.forEach(afterMethod -> runTest(afterMethod, testObj));
