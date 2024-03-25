@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTO 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:sqlite</property>
+        <property name="connection.username">sa</property>
+<!--        <property name="connection.password"></property>-->
+<!--        <property name="hibernate.default_schema"></property>-->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+        <!--        create, create-drop, update, validate, none -->
+        <property name="hbm2ddl.auto">create</property>
+        <property name="show_sql">true</property>
+        <!--        <property name="show_sql">true</property>-->
+        <!--        <property name="format_sql">true</property>-->
+        <mapping class="lesson_4.hw_4.Author"/>
+        <mapping class="lesson_4.hw_4.Book"/>
+    </session-factory>
+</hibernate-configuration>

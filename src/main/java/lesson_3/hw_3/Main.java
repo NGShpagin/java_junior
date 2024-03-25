@@ -13,7 +13,6 @@ import java.util.function.Consumer;
 public class Main {
     public static void main(String[] args) {
         Student student1 = new Student("Igor");
-        Student student2 = new Student("Vladimir");
 
         Path path = MyClass.saveObjInFile(student1);
         Student readStudent = MyClass.readStudentAndDeleteFile(path);

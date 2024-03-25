@@ -2,7 +2,7 @@ package lesson_4;
 
 import java.sql.*;
 
-public class Main {
+public class Jdbc {
     public static void main(String[] args) throws SQLException {
         // RDBMS - Relation Database Management System (Postgres, MySQL, Oracle...)
         // SQL - Structure Query Language
